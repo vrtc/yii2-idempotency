@@ -1,0 +1,36 @@
+{
+    "name": "vrtc/yii2-idempotency",
+    "description": "High-performance idempotency behavior for Yii2 REST APIs with load protection",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "idempotency", "api", "rest", "performance", "redis", "lock"],
+    "license": "MIT",
+    "version": "dev-main",
+    "authors": [
+        {
+            "name": "Dmitriy Kindeev",
+            "email": "dkindeev@mail.ru"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "yiisoft/yii2": "^2.0",
+        "yiisoft/yii2-redis": "^2.0",
+        "ramsey/uuid": "^4.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "yiisoft/yii2-faker": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Idempotency\\": "src/"
+        }
+    },
+    "extra": {
+        "bootstrap": "Idempotency\\Bootstrap",
+        "config-plugin": {
+            "console": "config/console.php"
+        }
+    }
+}
